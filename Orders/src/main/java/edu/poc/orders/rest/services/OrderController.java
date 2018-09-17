@@ -77,6 +77,11 @@ public class OrderController
         }
 
         final OrderVO order = orderService.getOrderByOrderId(orderId);
+        
+        if (order == null)
+        {
+            throw new NotFoundException("Order Id: " + orderNumber + " could not be foud");
+        }
 
         return new ResponseEntity<OrderVO>(order, HttpStatus.OK);
 

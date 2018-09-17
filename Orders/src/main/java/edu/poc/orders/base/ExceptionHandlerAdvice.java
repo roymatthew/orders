@@ -8,17 +8,16 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import edu.poc.orders.exception.InvalidPaymentException;
 import edu.poc.orders.exception.NotFoundException;
 
+/**
+ * ExceptionHandlerAdvice.
+ *
+ * @author rmathew
+ */
 @ControllerAdvice
 public class ExceptionHandlerAdvice
 {
 
-    public ExceptionHandlerAdvice()
-    {
-
-        // TODO Auto-generated constructor stub
-
-    }
-    
+  
     /**
      * Handle all generic Exceptions and Sends Exception in JSON Format.
      * 

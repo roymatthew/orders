@@ -73,7 +73,12 @@ public class OrderServiceImpl implements OrderService
     public OrderVO getOrderByOrderId(final Long orderId)
     {
         final Order order = orderRepository.findByOrderId(orderId);
-        final OrderVO orderVO = new OrderVO(order);
+        OrderVO orderVO = null;
+        if (order != null)
+        {
+            orderVO = new OrderVO(order);
+        }
+        
         return orderVO;
 
     }
